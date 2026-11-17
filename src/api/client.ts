@@ -4,7 +4,7 @@ import axios, { AxiosError } from "axios";
  * Centralized typed Axios client with base URL, timeout, and response interceptor.
  */
 const apiClient = axios.create({
-  baseURL: import.meta.env.VITE_API_BASE_URL ?? (import.meta.env.PROD ? "" : "http://localhost:8000"),
+  baseURL: import.meta.env.VITE_API_BASE_URL || (import.meta.env.PROD ? "https://helix-ai-backend.vercel.app" : "http://localhost:8000"),
   timeout: 180000, // 3 minutes timeout for heavy PubMed/LLM pipeline runs
   headers: {
     "Content-Type": "application/json",

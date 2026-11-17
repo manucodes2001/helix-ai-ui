@@ -131,7 +131,7 @@ export const helixApi = {
    * Construct direct export URL for streaming.
    */
   getExportUrl: (datasetKey: string): string => {
-    const base = import.meta.env.VITE_API_BASE_URL ?? (import.meta.env.PROD ? "" : "http://localhost:8000");
+    const base = import.meta.env.VITE_API_BASE_URL || (import.meta.env.PROD ? "https://helix-ai-backend.vercel.app" : "http://localhost:8000");
     return `${base}/api/export/${datasetKey}`;
   },
 };
