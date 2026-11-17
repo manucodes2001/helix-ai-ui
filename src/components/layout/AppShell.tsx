@@ -104,22 +104,17 @@ export const AppShell: React.FC<{ children: React.ReactNode }> = ({ children }) 
           onClick={() => navigate("/")}
         >
           <Box
+            component="img"
+            src="/favicon.svg"
+            alt="Helix AI"
             sx={{
-              width: 34,
-              height: 34,
+              width: 36,
+              height: 36,
               borderRadius: 2,
-              background: "linear-gradient(135deg, #0D9488 0%, #14B8A6 100%)",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              fontSize: "1.15rem",
-              fontWeight: 800,
-              color: "#FFFFFF",
-              boxShadow: "0 2px 8px rgba(13, 148, 136, 0.4)",
+              boxShadow: "0 2px 10px rgba(13, 148, 136, 0.4)",
+              flexShrink: 0,
             }}
-          >
-            🧬
-          </Box>
+          />
           {(!collapsed || isMobile) && (
             <Box>
               <Typography
